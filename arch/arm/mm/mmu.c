@@ -822,7 +822,7 @@ void __init sanity_check_meminfo(void)
 		vmeminfo.vbank[i].start = start;
 		delta -= bank_phys_start(&meminfo.bank[i]) - prev;
 		prev = bank_phys_end(&meminfo.bank[i]);
-		start += bank_phys_size(&meminfo.bank[i]);
+		start = bank_phys_size(&meminfo.bank[i]);
 		vmeminfo.vbank[i].delta = delta;
 	}
 #endif

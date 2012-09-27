@@ -7,7 +7,7 @@ export ARCH=arm
 
 # sed -i s/CONFIG_LOCALVERSION=\".*\"/CONFIG_LOCALVERSION=\"-leanKernel-${1}\"/ .config
 make msm8960_mmi_defconfig
-make headers_install
+#make headers_install
 make modules
 make -j8 zImage 2>&1 | tee ~/logs/msm8960_mmi.txt
 # cp arch/arm/boot/zImage mkboot/
